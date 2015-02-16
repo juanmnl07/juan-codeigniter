@@ -45,6 +45,9 @@ class Users extends CI_Controller {
 	{
 		$data['title'] = "Users"; //title page
 		$data['content'] = array('main_content' => 'users/index');
+
+		//get all Users
+		$data['users'] = $this->user->getUsers();
 		$this->load->view('template/main-template', $data);
 	}
 

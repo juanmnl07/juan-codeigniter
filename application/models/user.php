@@ -5,6 +5,7 @@ class User extends CI_Model {
     var $last_name = '';
     var $email    = '';
     var $password    = '';
+    var $permission    = '';
 
     function __construct()
     {
@@ -12,7 +13,7 @@ class User extends CI_Model {
         parent::__construct();
     }
     
-    /** GET: USER */
+    /** VALIDATE */
 
     function validateUser($email='', $password='')
     {
@@ -26,18 +27,30 @@ class User extends CI_Model {
         }
     }
 
-    /** INSERT: USER */
+    /** INSERT */
 
     function insert($data=array())
     {
         $this->db->insert('user', $this);
     }
 
-    /** UPDATE: USER */
+    /** UPDATE */
 
     function update($email='',$data=array())
     {
         $this->db->update('user', $this, array('email' => $email));
+    }
+
+    /** GET */
+
+    function getUsers(){
+
+        $this->db->select('last_name, first_name, permission, email');
+        $query = $this->db->get('user');
+        $query_result = $query->result();
+
+        return $query_result;
+
     }
 
 }

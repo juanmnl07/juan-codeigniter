@@ -6,7 +6,7 @@
 
 			<?php if (isset($main_menu)): ?>
 					<!-- main menu -->
-					<div id="main-menu">
+					<div id="main-menu" class="col col_10">
 						<?php
 								echo "<ul>";
 								foreach ($main_menu as $key => $value) {
@@ -19,7 +19,7 @@
 			<?php endif; ?>
 
 			<!-- language selector -->
-			<div id="language-selector">		
+			<div id="language-selector" class="col col_2">		
 
 				<ul>
 					<li>Francais</li> | 
