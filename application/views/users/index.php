@@ -1,7 +1,9 @@
 <div id="list-users" class="col_center col_10">
 	
+	<!-- link add new user -->
+	<?= anchor($new_user_link['uri'],$new_user_link['text'],$new_user_link['attributes']) ?>
 	<!-- here list all users -->
-	<table>
+	<table width="100%">
 		<thead>
 			<tr>
 				<td>Last Name</td>
@@ -25,28 +27,28 @@
 
 						switch ($key2) {
 							case 'last_name':
-								 echo "<tr>
+								 echo "<tr class=''>
 								 			<td>
 								 				".$value2."
 								 			</td>
 								 	   </tr>";
 							break;
 							case 'first_name':
-								 echo "<tr>
+								 echo "<tr class=''>
 								 			<td>
 								 				".$value2."
 								 			</td>
 								 	   </tr>";
 							break;
 							case 'permission':
-								 echo "<tr>
+								 echo "<tr class=''>
 								 			<td>
 								 				".$value2."
 								 			</td>
 								 	   </tr>";
 							break;
 							case 'email':
-								 echo "<tr>
+								 echo "<tr class=''>
 								 			<td>
 								 				".$value2."
 								 			</td>

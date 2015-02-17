@@ -44,7 +44,15 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = "Users"; //title page
-		$data['content'] = array('main_content' => 'users/index');
+		$data['content'] = array('main_content' => 'users/index'); //set the url to users page
+		//new user link
+		$data['new_user_link'] = array('uri' => 'user/new',
+										 'text' => $this->lang->line('add-new-user'),
+										 'attributes' => array(
+										 		"id" => "new-user-link",
+										 		"class" => "submit",
+										 	),
+										);
 
 		//get all Users
 		$data['users'] = $this->user->getUsers();

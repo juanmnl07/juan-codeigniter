@@ -67,7 +67,7 @@
 
 //header
 #header {
-	min-height: 50px;
+	min-height: 70px;
 }
 
 #language-selector {
@@ -176,9 +176,13 @@
 	margin: 290px auto 0;
 }
 
-//master page -- iner
-#main-menu {
-	
+//master page -- inner
+#main-menu ul li{
+	padding: 21px 15px;	
+}
+
+.background-black {
+	background-color: #2E2E2E;	
 }
 
 #main-menu ul li {
@@ -188,4 +192,35 @@
 
 #main-menu ul li a{
 	text-decoration: none;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+//users
+
+#list-users {
+	margin-top: 125px;
+}
+
+#list-users thead tr, #list-users tbody tr  {
+	float: left;
+	width: 25%;
+}
+
+#list-users thead tr {
+	background-color: #70AEC4;
+	text-align: center;
+}
+
+#new-user-link {
+	text-decoration: none;
+}
+
+#list-users table {
+	margin-top: 25px;
+}
+
+#new-user-link, #list-users table {
+	float: left;
 }

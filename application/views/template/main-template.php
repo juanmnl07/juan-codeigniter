@@ -17,7 +17,7 @@
 </head>
 	<body>
 
-		<?php $menu['main_menu'] = array("home" => array('uri' => '/',
+		<?php $data['main_menu'] = array("home" => array('uri' => '/',
 														 'text' => $this->lang->line('home'),
 														 'attributes' => array(
 														 		"id" => "main-menu-home",
@@ -45,10 +45,11 @@
 														 		"class" => "main-menu-link",
 														 	),
 														),
-										);
+										);	
+			$data['header_attributes'] = array("class" => "background-black");
 		?>
 		<!-- header -->
-		<?= $this->load->view('template/header',$menu) ?>
+		<?= $this->load->view('template/header',$data) ?>
 
 		<!-- content -->
 		<?= $this->load->view('template/content',$content) ?>

@@ -1,4 +1,8 @@
-<div id="header-wrapper">
+<?php if (isset($header_attributes)) {
+	$class_header = $header_attributes['class'];
+}?>
+
+<div id="header-wrapper" class="<?php echo $class_header ?>">
 	
 	<div id="header">
 		
